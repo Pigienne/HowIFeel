@@ -1,3 +1,4 @@
+
 :root {
   --cream: #EAE5D3;
   --ink: #000000;
@@ -60,7 +61,9 @@ html, body {
   padding-bottom: 3px;
 }
 
-.landing:focus-visible { outline: 3px solid var(--cream); outline-offset: -8px; }
+.landing:focus { outline: none; }
+.landing:focus-visible { outline: none; }
+.landing:focus-visible .enter { border-bottom-width: 3px; }
 
 .grid { display: grid; grid-template-columns: 1fr; gap: 2px; }
 
