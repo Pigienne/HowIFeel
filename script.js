@@ -126,13 +126,15 @@
     }
 
     var body = [
-      'Rating: ' + f1.value + '/100',
+      'Rating: ' + f1.value + '/4',
       'Tags: ' + (tags.join(', ') || 'none'),
       'Recommend: ' + (rec ? rec.value : 'no answer'),
       'Note: ' + (text || 'none')
     ].join('\n');
 
-    window.location.href = 'mailto:pgn.mrc@gmail.com?subject=' +
+    var to = ['pgn', '.', 'mrc'].join('') + String.fromCharCode(64) + ['gmail', 'com'].join('.');
+
+    window.location.href = 'mailto:' + to + '?subject=' +
       encodeURIComponent('Feedback for Marco') + '&body=' + encodeURIComponent(body);
 
     form.hidden = true;
