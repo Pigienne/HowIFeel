@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Constants</title>
+<meta name="description" content="An attempt to explain how I feel, using sliders.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<main id="landing" class="screen landing" role="button" tabindex="0" aria-label="Enter">
+  <p class="hero">Unfortunately i'm a nerd and that's the only way I have to explain how I feel ;( </p>
+  <span class="enter">Enter &#8599;</span>
+</main>
+
+<main id="model" class="screen" hidden>
+  <div class="grid">
+
+    <section class="pan pan-mint">
+      <p class="eyebrow">Move to change the algorithm</p>
+      <div class="row">
+        <span class="lbl"><label for="s1">Your freedom</label></span>
+        <span class="ctl"><input type="range" id="s1" min="0" max="100" step="1" value="80"></span>
+        <span class="num" id="v1">80</span>
+      </div>
+      <div class="row">
+        <span class="lbl"><label for="s4">My freedom</label></span>
+        <span class="ctl"><input type="range" id="s4" min="0" max="100" step="1" value="70"></span>
+        <span class="num" id="v4">70</span>
+      </div>
+      <div class="row">
+        <span class="lbl"><label for="s2">My insecurities</label></span>
+        <span class="ctl"><input type="range" id="s2" min="0" max="100" step="1" value="65"></span>
+        <span class="num" id="v2">65</span>
+      </div>
+      <div class="row last">
+        <span class="lbl"><label for="s3">How much we talk</label></span>
+        <span class="ctl"><input type="range" id="s3" min="0" max="100" step="1" value="35"></span>
+        <span class="num" id="v3">35</span>
+      </div>
+    </section>
+
+    <section class="pan pan-yellow">
+      <p class="eyebrow">What follows</p>
+      <div class="row"><span class="lbl">Insecurity now</span><span class="ctl dots" id="b_ins"></span><span class="num" id="n_ins">54</span></div>
+      <div class="row"><span class="lbl">My pain</span><span class="ctl dots" id="b_tri"></span><span class="num" id="n_tri">47</span></div>
+      <div class="row"><span class="lbl">Weight on you</span><span class="ctl dots" id="b_pes"></span><span class="num" id="n_pes">21</span></div>
+      <div class="row"><span class="lbl">How I'm doing</span><span class="ctl dots" id="b_mia"></span><span class="num" id="n_mia">49</span></div>
+      <div class="row last"><span class="lbl">How you're doing</span><span class="ctl dots" id="b_tua"></span><span class="num" id="n_tua">64</span></div>
+    </section>
+
+    <section class="pan pan-pink">
+      <p class="eyebrow">Where a relationship would come from</p>
+      <div class="row"><span class="lbl">A shared choice</span><span class="ctl dots" id="b_con"></span><span class="num" id="n_con">41</span></div>
+      <div class="row"><span class="lbl">My fear</span><span class="ctl dots" id="b_pau"></span><span class="num" id="n_pau">47</span></div>
+      <div class="row last"><span class="lbl">Ending the limbo</span><span class="ctl dots" id="b_sta"></span><span class="num" id="n_sta">33</span></div>
+    </section>
+
+    <section class="pan pan-orange">
+      <p class="eyebrow">Constant</p>
+      <div class="row last"><span class="lbl">How much I care</span><span class="ctl dots" id="b_care"></span><span class="num">100</span></div>
+    </section>
+
+  </div>
+
+  <section class="pan pan-olive">
+    <div class="row last big"><span class="lbl">What we have</span><span class="ctl dots" id="b_val"></span><span class="num" id="n_val">49</span></div>
+  </section>
+
+  <nav class="pan foot">
+    <button type="button" class="link" data-go="landing">&#8598; Back</button>
+    <button type="button" class="link" data-go="feedback">Leave feedback &#8599;</button>
+  </nav>
+</main>
+
+<main id="feedback" class="screen" hidden>
+  <section class="pan pan-cream">
+    <p class="hero small">BE HONEST BRO</p>
+  </section>
+
+  <form id="fb-form" class="grid" novalidate>
+    <section class="pan pan-mint">
+      <p class="eyebrow">Overall rating of Marco</p>
+      <div class="row last">
+        <span class="lbl"><label for="f1">from -10 to 4</label></span>
+        <span class="ctl"><input type="range" id="f1" name="rating" min="-10" max="4" step="1" value="72"></span>
+        <span class="num" id="fv1">72</span>
+      </div>
+    </section>
+
+    <section class="pan pan-yellow">
+      <p class="eyebrow">Pick anything that applies</p>
+      <div class="chips">
+        <label class="chip"><input type="checkbox" name="tag" value="we should talk more"><span>we should talk more</span></label>
+        <label class="chip"><input type="checkbox" name="tag" value="you're overthinking it"><span>you're overthinking it</span></label>
+        <label class="chip"><input type="checkbox" name="tag" value="this is cute"><span>this is cute</span></label>
+        <label class="chip"><input type="checkbox" name="tag" value="certified nerd"><span>bro stop nerding</span></label>
+        <label class="chip"><input type="checkbox" name="tag" value="fewer charts please"><span>I like you</span></label>
+      </div>
+    </section>
+
+    <section class="pan pan-pink">
+      <p class="eyebrow">Would you recommend him</p>
+      <div class="chips">
+        <label class="chip"><input type="radio" name="rec" value="yes"><span>yes</span></label>
+        <label class="chip"><input type="radio" name="rec" value="with notes"><span>with notes</span></label>
+        <label class="chip"><input type="radio" name="rec" value="ask me in person"><span>ask me in person</span></label>
+      </div>
+    </section>
+
+    <section class="pan pan-orange">
+      <p class="eyebrow">Anything else</p>
+      <textarea id="f-note" name="note" rows="4" placeholder="say it here"></textarea>
+    </section>
+
+    <section class="pan pan-olive span-all">
+      <button type="submit" class="submit">Send &#8599;</button>
+      <p class="err" id="f-err" hidden>Move the slider or write something first.</p>
+    </section>
+  </form>
+
+  <section class="pan pan-olive" id="fb-done" hidden>
+    <p class="hero small">noted. he will treasure it.</p>
+  </section>
+
+  <nav class="pan foot">
+    <button type="button" class="link" data-go="model">&#8598; Back to the sliders</button>
+  </nav>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
